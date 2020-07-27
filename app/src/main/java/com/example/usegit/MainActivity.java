@@ -11,5 +11,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //在git修改了,在本地测试一下吧 我又在remote修改了
+        //在git修改了,在本地测试一下吧 我是在local修改的123
     }
 }
