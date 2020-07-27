@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         //在git修改了,在本地测试一下吧 我是在local修改的123
         if (false){
             System.out.println("打印true222");
+            System.out.println("打印true222");
         }
     }
 }
