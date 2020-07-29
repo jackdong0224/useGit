@@ -2,10 +2,14 @@ package com.example.usegit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Button bt_kotlin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +19,26 @@ public class MainActivity extends AppCompatActivity {
         if (false){
             System.out.println("打印true222");
             System.out.println("打印true222");
+        }
+        initView();
+        initListener();
+    }
+
+    private void initListener() {
+        bt_kotlin.setOnClickListener(this);
+    }
+
+    private void initView() {
+        bt_kotlin = findViewById(R.id.bt_kotlin);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.bt_kotlin:
+                Intent intent = new Intent(this, KotlinActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 }
